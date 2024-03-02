@@ -1,19 +1,20 @@
 ﻿# MERN-CRUD
 
+## Backend
 
+### [CREATE](http://localhost:8080/add-phone)
 
-## [CREATE](http://localhost:8080/add-phone)
+<!-- ![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/create.png "CRUD App Interface") -->
+<img src="https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/create.png" alt="CRUD Application Screenshot" title="CRUD App Interface" style="width:800px;">
 
-![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/create.png "CRUD App Interface")
-
-### Request:
+#### Request:
 ```json
 {
     "name":"Gaurav Joshi",
     "phone":8556909577
 }
 ```
-### Response:
+#### Response:
 ```json
 {
     "status": "Success",
@@ -28,9 +29,9 @@
 }
 ```
 
-## [READ](http://localhost:8080/get-phone)
+### [READ](http://localhost:8080/get-phone)
 ![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/read.png "CRUD App Interface")
-### Response:
+#### Response:
 ```json
 {
     "status": "Success",
@@ -53,16 +54,16 @@
 }
 ```
 
-## [UPDATE](http://localhost:8080/update-phone/65e2eaaebf6adf60056cadd0)
+### [UPDATE](http://localhost:8080/update-phone/65e2eaaebf6adf60056cadd0)
 ![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/update.png "CRUD App Interface")
-### Request
+#### Request
 ```json
 {
     "name":"Latika Joshi",
     "phone":7087077998
 }
 ```
-### Response
+#### Response
 ```json
 {
     "status": "Success",
@@ -77,4 +78,4 @@
 }
 ```
 ![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/delete.png "CRUD App Interface")
-## [DELETE](http://localhost:8080/delete-phone/65e2eaaebf6adf60056cadd0)
+### [DELETE](http://localhost:8080/delete-phone/65e2eaaebf6adf60056cadd0)
