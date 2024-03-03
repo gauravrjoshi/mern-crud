@@ -105,3 +105,10 @@ Overall, this code provides a backend API for managing phone numbers, including 
 ```
 ![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/delete.png "CRUD App Interface")
 ### [DELETE](http://localhost:8080/delete-phone/65e2eaaebf6adf60056cadd0)
+
+
+
+## .env file added in express
+```bash
+npm install express @dotenvx/dotenvx --save
+```

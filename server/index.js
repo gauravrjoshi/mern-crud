@@ -2,6 +2,7 @@ const express = require('express')
 
 const PhoneBook = require('./Model/PhoneBook')
 
+require('dotenv').config();
 
 // Database Code
 const mongoose = require('mongoose')
@@ -11,13 +12,14 @@ const app = express()
 // Server 
 app.use(express.json())
 app.use(cors())
-const PORT = 8080
+const PORT = process.env.PORT
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}...`)
 })
 
 // Database Code
-const DB = 'mongodb+srv://gauravjoshiukin:QD3QWIwHkIuXk71I@statelyworld.dzcclit.mongodb.net/'
+console.log(process.env);
+const DB = process.env.DB_CONNECTION_STRING
 mongoose.connect(DB, {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,
