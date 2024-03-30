@@ -1,4 +1,10 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
+
+mongoose.connect(process.env.SW_DB_URI, {
+    // Connection options (commented out, but can be used for specific MongoDB versions/settings)
+}).then(() => {
+    console.log('Database connected..') // Log message on successful database connection
+})
 
 const PhoneBookSchema = new mongoose.Schema({
     name: {
@@ -13,4 +19,4 @@ const PhoneBookSchema = new mongoose.Schema({
 
 const PhoneBook = mongoose.model('PhoneBook', PhoneBookSchema)
 
-module.exports = PhoneBook
+export default PhoneBook;

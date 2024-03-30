@@ -1,6 +1,6 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const uri = process.env.ATLAS_URI || "";
+const uri = process.env.SW_DB_URI || "";
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
@@ -21,6 +21,6 @@ try {
     console.error(err);
 }
 
-let db = client.db("sw_employees");
+let db = client.db("sw_mern_app");
 
 export default db;
