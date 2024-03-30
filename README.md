@@ -1,5 +1,12 @@
 ﻿# SW MERN App
 
+## Table of Contents
+
+-   [Overview](#overview)
+-   [Documentation](#documentation)
+-   [ToDo](#todo)
+
+
 ## Overview
 This is a simple MERN (MongoDB, Express.js, React, Node.js) application for managing records. It provides basic CRUD (Create, Read, Update, Delete) operations for a collection of records stored in a MongoDB database. The client-side of the application is built using React with Vite as the build tool and Tailwind CSS for styling.
 
@@ -132,3 +139,4 @@ This README provides instructions for setting up the MERN application, including
 
 - [x] The frontend basic setup done
 - [ ] [How to Secure Your MERN Stack App with JWT-Based User Authentication and Authorization](https://www.freecodecamp.org/news/how-to-secure-your-mern-stack-application/)
+- [ ] A single-page MERN app that uses mui react-data-grid + remote MongoDB database displays data table from the MongoDB data source and does server-side filtering based on the filters set by the user on the front-end
