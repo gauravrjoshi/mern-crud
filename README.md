@@ -1,4 +1,75 @@
-﻿# SW MERN APP
+﻿# SW MERN App
+
+## Overview
+This is a simple MERN (MongoDB, Express.js, React, Node.js) application for managing records. It provides basic CRUD (Create, Read, Update, Delete) operations for a collection of records stored in a MongoDB database. The client-side of the application is built using React with Vite as the build tool and Tailwind CSS for styling.
+
+## Setup
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/gauravrjoshi/mern-crud.git
+   ```
+
+2. **Install Dependencies**:
+   - Navigate to the project directory:
+     ```bash
+     cd <project-directory>
+     ```
+   - Install server-side dependencies:
+     ```bash
+     npm install
+     ```
+   - Navigate to the client directory:
+     ```bash
+     cd client
+     ```
+   - Install client-side dependencies:
+     ```bash
+     npm install
+     ```
+
+3. **Configure Database**:
+   - Ensure MongoDB is installed and running locally.
+   - Update the database connection details in `../db/connection.js` if necessary.
+
+4. **Run the Application**:
+   - Start the server:
+     ```bash
+     npm start
+     ```
+   - Start the client (in a separate terminal):
+     ```bash
+     npm run dev
+     ```
+
+5. **Access the Application**:
+   - Open your web browser and navigate to `http://localhost:3000` to access the application.
+
+## API Routes
+- **GET /record**: Retrieve a list of all records.
+- **GET /record/:id**: Retrieve a single record by ID.
+- **POST /record**: Create a new record.
+- **PATCH /record/:id**: Update a record by ID.
+- **DELETE /record/:id**: Delete a record by ID.
+
+## File Structure
+- **`server`**: Contains server-side code (Node.js/Express.js).
+  - `routes/recordRoutes.js`: Defines API routes for managing records.
+  - `db/connection.js`: Establishes connection to MongoDB.
+- **`client`**: Contains client-side code (React).
+  - `src/`: Contains React source files.
+  - `public/`: Contains public assets like images.
+  - `vite.config.js`: Configuration file for Vite build tool.
+
+## Dependencies
+- **Server-side**:
+  - Express.js: Web framework for Node.js.
+  - MongoDB: Database driver for MongoDB.
+- **Client-side**:
+  - React: JavaScript library for building user interfaces.
+  - Vite: Next-generation frontend build tool for React.
+  - Tailwind CSS: Utility-first CSS framework for styling.
+
+
 
 ## Learning Resources:
  - [MongoDB Tutorial in 1 Hour (2024) 🍃](https://www.youtube.com/watch?v=J6mDkcqU_ZE)
@@ -47,3 +118,11 @@ npm install
 node --env-file=config.env server
 ```
 
+## Contributing
+Contributions are welcome! Please feel free to submit issues or pull requests for any improvements or bug fixes.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+```
+
+This README provides instructions for setting up the MERN application, including details about the server-side and client-side code structure, API routes, dependencies, and how to contribute to the project. It's tailored specifically for your application, incorporating the information you provided about using Vite as the build tool and Tailwind CSS for styling.
