@@ -1,4 +1,13 @@
-﻿# MERN-CRUD
+﻿# SW MERN APP
+
+## Learning Resources:
+ - [MongoDB Tutorial in 1 Hour (2024) 🍃](https://www.youtube.com/watch?v=J6mDkcqU_ZE)
+ - [How to get started with the MERN stack](https://www.mongodb.com/languages/mern-stack-tutorial)
+
+## [Documentation](https://docs.google.com/document/d/1fOS9ykJq5JkBTggqGvQehEprqKj2l9jeiW8U49dExWA/edit?usp=sharing)
+
+- [Download MongoDb](https://www.mongodb.com/try/download/community)
+- [APIs](https://documenter.getpostman.com/view/21176684/2sA35G42mr)
 
 ## Backend
 
@@ -27,88 +36,8 @@ The provided code is a backend implementation for a MERN (MongoDB, Express.js, R
 Overall, this code provides a backend API for managing phone numbers, including adding, retrieving, updating, and deleting phone number entries in the database. It serves as the backend for a MERN CRUD application with MongoDB as the database.
 
 
-
-### [CREATE](http://localhost:8080/add-phone)
-
-<!-- ![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/create.png "CRUD App Interface") -->
-<img src="https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/create.png" alt="CRUD Application Screenshot" title="CRUD App Interface" style="width:800px;">
-
-#### Request:
-```json
-{
-    "name":"Gaurav Joshi",
-    "phone":8556909577
-}
-```
-#### Response:
-```json
-{
-    "status": "Success",
-    "data": {
-        "phoneNumber": {
-            "name": "Gaurav Joshi",
-            "phone": 8556909577,
-            "_id": "65e2f2f2fe8a6099f146573e",
-            "__v": 0
-        }
-    }
-}
-```
-
-### [READ](http://localhost:8080/get-phone)
-![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/read.png "CRUD App Interface")
-#### Response:
-```json
-{
-    "status": "Success",
-    "data": {
-        "phoneNumbers": [
-            {
-                "_id": "65e2eaaebf6adf60056cadd0",
-                "name": "Gaurav Joshi",
-                "phone": 8556909577,
-                "__v": 0
-            },
-            {
-                "_id": "65e2f2f2fe8a6099f146573e",
-                "name": "Gaurav Joshi",
-                "phone": 8556909577,
-                "__v": 0
-            }
-        ]
-    }
-}
-```
-
-### [UPDATE](http://localhost:8080/update-phone/65e2eaaebf6adf60056cadd0)
-![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/update.png "CRUD App Interface")
-#### Request
-```json
-{
-    "name":"Latika Joshi",
-    "phone":7087077998
-}
-```
-#### Response
-```json
-{
-    "status": "Success",
-    "data": {
-        "updatedPhone": {
-            "_id": "65e2eaaebf6adf60056cadd0",
-            "name": "Latika Joshi",
-            "phone": 7087077998,
-            "__v": 0
-        }
-    }
-}
-```
-![CRUD Application Screenshot](https://raw.githubusercontent.com/gauravrjoshi/mern-crud/main/img/delete.png "CRUD App Interface")
-### [DELETE](http://localhost:8080/delete-phone/65e2eaaebf6adf60056cadd0)
-
-
-
 ## .env file added in express
 ```bash
 npm install express @dotenvx/dotenvx --save
 ```
+
