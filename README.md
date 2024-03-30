@@ -36,8 +36,8 @@ The provided code is a backend implementation for a MERN (MongoDB, Express.js, R
 Overall, this code provides a backend API for managing phone numbers, including adding, retrieving, updating, and deleting phone number entries in the database. It serves as the backend for a MERN CRUD application with MongoDB as the database.
 
 
-## .env file added in express
+## Run backend server command
 ```bash
-npm install express @dotenvx/dotenvx --save
+node --env-file=config.env server
 ```
 
