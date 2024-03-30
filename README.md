@@ -126,3 +126,9 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ```
 
 This README provides instructions for setting up the MERN application, including details about the server-side and client-side code structure, API routes, dependencies, and how to contribute to the project. It's tailored specifically for your application, incorporating the information you provided about using Vite as the build tool and Tailwind CSS for styling.
+```
+
+## TODO
+
+- [x] The frontend basic setup done
+- [ ] [How to Secure Your MERN Stack App with JWT-Based User Authentication and Authorization](https://www.freecodecamp.org/news/how-to-secure-your-mern-stack-application/)
