@@ -87,7 +87,7 @@ routerPhoneBook.patch('/update-phone/:id', async (req, res) => {
 routerPhoneBook.delete('/delete-phone/:id', async (req, res) => {
     await PhoneBook.findByIdAndDelete(req.params.id) // Delete the document with the specified ID
     try {
-        res.status(204).json({
+        res.status(200).json({
             status: 'Success',
             data: {}
         })
