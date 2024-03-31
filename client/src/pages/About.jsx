@@ -79,7 +79,6 @@ const About = () => {
                     <li>A single-page MERN app that uses mui react-data-grid + remote MongoDB database displays data table from the MongoDB data source and does server-side filtering based on the filters set by the user on the front-end</li>
                 </ul>
             </div>
-
         </div>
     )
 }

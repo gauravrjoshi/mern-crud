@@ -36,7 +36,7 @@ router.post("/", async (req, res) => {
             position: req.body.position,
             level: req.body.level,
         };
-       // res.send(newDocument); return false;
+        // res.send(newDocument); return false;
         let collection = await db.collection("records");
         let result = await collection.insertOne(newDocument);
         res.send(result).status(204);

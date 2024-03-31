@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const PhoneBookSchema = new mongoose.Schema({
+const ContactSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -11,6 +11,6 @@ const PhoneBookSchema = new mongoose.Schema({
     }
 })
 
-const PhoneBook = mongoose.model('PhoneBook', PhoneBookSchema)
+const Contact = mongoose.model('Contact', ContactSchema)
 
-export default PhoneBook;
+export default Contact;
