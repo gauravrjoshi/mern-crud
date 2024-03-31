@@ -8,7 +8,8 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
-import { Home, Login, Signup , About} from "./pages";
+import { Home, Login, Signup, About } from "./pages";
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,16 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+    ],
+  },
+  {
+    path: "/contact",
+    element: <App />,
+    children: [
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
