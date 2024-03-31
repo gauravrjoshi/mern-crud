@@ -8,7 +8,7 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
-import { Home, Login, Signup } from "./pages";
+import { Home, Login, Signup , About} from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +68,16 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/about",
+    element: <App />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
