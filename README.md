@@ -138,5 +138,5 @@ This README provides instructions for setting up the MERN application, including
 ## TODO
 
 - [x] The frontend basic setup done
-- [ ] [How to Secure Your MERN Stack App with JWT-Based User Authentication and Authorization](https://www.freecodecamp.org/news/how-to-secure-your-mern-stack-application/)
+- [x] [How to Secure Your MERN Stack App with JWT-Based User Authentication and Authorization](https://www.freecodecamp.org/news/how-to-secure-your-mern-stack-application/)
 - [ ] A single-page MERN app that uses mui react-data-grid + remote MongoDB database displays data table from the MongoDB data source and does server-side filtering based on the filters set by the user on the front-end
