@@ -1,8 +1,11 @@
 import express from "express";
 import cors from "cors";
+
 import records from "./routes/record.js";
 import phonebook from "./routes/phonebook.js";
 import authRoute from "./routes/AuthRoute.js"
+import contactRoute from "./routes/ContactRoute.js"
+
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -16,6 +19,7 @@ app.use(express.json());
 app.use("/record", records);
 app.use("/", phonebook);
 app.use("/", authRoute);
+app.use("/", contactRoute);
 
 // start the Express server
 app.listen(PORT, () => {
