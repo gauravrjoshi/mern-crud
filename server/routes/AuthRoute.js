@@ -1,6 +1,6 @@
 import express from "express";
-import { Signup, Login } from "../Controllers/AuthController.js"
-import {userVerification } from "../Middlewares/AuthMiddleware.js"
+import { Signup, Login, userVerification } from "../Controllers/AuthController.js"
+
 const authRoute = express.Router();
 
 authRoute.post("/signup", Signup);
