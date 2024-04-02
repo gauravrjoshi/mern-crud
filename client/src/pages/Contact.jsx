@@ -24,9 +24,7 @@ function Contact() {
         }
 
         // Handle form submission here
-        console.log(formData);
-
-        // Save to db
+        // console.log(formData);
 
         let data = JSON.stringify(formData);
 
