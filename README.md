@@ -19,7 +19,7 @@ This is a simple MERN (MongoDB, Express.js, React, Node.js) application for mana
 2. **Install Dependencies**:
    - Navigate to the project directory:
      ```bash
-     cd <project-directory>
+     cd server
      ```
    - Install server-side dependencies:
      ```bash
@@ -41,7 +41,7 @@ This is a simple MERN (MongoDB, Express.js, React, Node.js) application for mana
 4. **Run the Application**:
    - Start the server:
      ```bash
-     npm start
+     nodemon --env-file=config.env server.js
      ```
    - Start the client (in a separate terminal):
      ```bash
@@ -114,20 +114,6 @@ The provided code is a backend implementation for a MERN (MongoDB, Express.js, R
 
 Overall, this code provides a backend API for managing phone numbers, including adding, retrieving, updating, and deleting phone number entries in the database. It serves as the backend for a MERN CRUD application with MongoDB as the database.
 
-
-## Frontend setup  command
-```bash
-npm create vite@latest client --template react
-cd client
-npm install
-```
-## Run backend server command
-
-### Start the server:
-
-```bash
-nodemon --env-file=config.env server.js
-```
 
 ## Contributing
 Contributions are welcome! Please feel free to submit issues or pull requests for any improvements or bug fixes.
