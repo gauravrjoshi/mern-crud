@@ -2,17 +2,22 @@ import swContact from "../Model/ContactModel.js"
 
 export const Contact = async (req, res, next) => {
     const { email, name, message } = req.body;
-    // return res.json(req.body);
 
     try {
-        const { name, email, message } = req.body;
-        const existingUser = await swContact.findOne({ email });
-        if (existingUser) {
-            return res.json({ message: "User already exists" });
-        }
-        res.status(201).json({ message: "User signed in successfully", success: true, user });
-        next();
+        // Create a new instance of the Contact model
+        const newContact = new swContact({
+            name,
+            email,
+            message
+        });
+
+        // Save the new contact to the database
+        const savedContact = await newContact.save();
+
+        // Return the saved contact as JSON response
+        res.json(savedContact);
     } catch (error) {
         console.error(error);
+        res.status(500).json({ message: "Failed to save contact" });
     }
 };
