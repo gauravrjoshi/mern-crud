@@ -122,8 +122,11 @@ cd client
 npm install
 ```
 ## Run backend server command
+
+### Start the server:
+
 ```bash
-node --env-file=config.env server
+nodemon --env-file=config.env server.js
 ```
 
 ## Contributing
