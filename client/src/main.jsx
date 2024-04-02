@@ -10,6 +10,7 @@ import RecordList from "./components/RecordList";
 import "./index.css";
 import { Home, Login, Signup, About } from "./pages";
 import Contact from "./pages/Contact";
+import ExampleComponent from "./components/ExampleComponent";
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,16 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+    ],
+  },
+  {
+    path: "/use-effect-use-effect",
+    element: <App />,
+    children: [
+      {
+        path: "/use-effect-use-effect",
+        element: <ExampleComponent />,
       },
     ],
   },

@@ -2,23 +2,20 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import { BASE_URL } from '../config.js'
+import { ToastContainer, toast } from "react-toastify";
 
 const Home = () => {
     const navigate = useNavigate();
     const [cookies, removeCookie] = useCookies([]);
     const [username, setUsername] = useState("");
+    
     useEffect(() => {
         const verifyCookie = async () => {
             if (!cookies.token) {
                 navigate("/login");
             }
-            const { data } = await axios.post(
-                BASE_URL + "",
-                {},
-                { withCredentials: true }
-            );
+            const { data } = await axios.post(BASE_URL + "",{},{ withCredentials: true });
             const { status, user } = data;
             setUsername(user);
             return status
