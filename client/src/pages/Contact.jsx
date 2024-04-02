@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from "../config.js"
 
 function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,12 +13,13 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSuccessMessage('');
 
         const { email, name, message } = formData;
 
         // Validate form fields
         if (!email.trim() || !name.trim() || !message.trim()) {
-            alert("Please fill out all fields.");
+            setErrorMessage("Please fill out all fields.");
             return;
         }
 
@@ -33,7 +33,7 @@ function Contact() {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://localhost:5050/contact',
+            url: BASE_URL + '/contact',
             headers: {
                 'Content-Type': 'application/json',
                 'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDkwZmNhYzM3YTIzNTM0N2RlM2U2OCIsImlhdCI6MTcxMTk3NjE0NCwiZXhwIjoxNzEyMjM1MzQ0fQ.YIze6hjQtJQEhkyyGLgerj0910lxBVFoGWVttNAlNoE'
@@ -43,10 +43,14 @@ function Contact() {
 
         axios.request(config)
             .then((response) => {
+                setSuccessMessage("Form submitted successfully!");
+                setErrorMessage('');
+                setFormData({ name: '', email: '', message: '' }); // Clear form fields
                 console.log(JSON.stringify(response.data));
             })
             .catch((error) => {
                 console.log(error);
+                setErrorMessage("An error occurred while submitting the form. Please try again later.");
             });
 
     };
@@ -54,9 +58,19 @@ function Contact() {
     return (
         <div className="max-w-md mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-4">Contact Us</h2>
+            {errorMessage && (
+                <div className="mb-4 text-red-500">
+                    {errorMessage}
+                </div>
+            )}
+            {successMessage && (
+                <div className="mb-4 text-green-500">
+                    {successMessage}
+                </div>
+            )}
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="name" className="block mb-1 font-medium">Name</label>
+                    <label htmlFor="name" className="block mb-1 font-medium">Name<span className="text-red-500">*</span></label>
                     <input
                         type="text"
                         id="name"
@@ -67,7 +81,7 @@ function Contact() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block mb-1 font-medium">Email</label>
+                    <label htmlFor="email" className="block mb-1 font-medium">Email<span className="text-red-500">*</span></label>
                     <input
                         type="email"
                         id="email"
@@ -78,7 +92,7 @@ function Contact() {
                     />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="message" className="block mb-1 font-medium">Message</label>
+                    <label htmlFor="message" className="block mb-1 font-medium">Message<span className="text-red-500">*</span></label>
                     <textarea
                         id="message"
                         name="message"
