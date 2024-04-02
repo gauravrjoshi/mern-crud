@@ -81,6 +81,7 @@ This is a simple MERN (MongoDB, Express.js, React, Node.js) application for mana
 ## Learning Resources:
  - [MongoDB Tutorial in 1 Hour (2024) 🍃](https://www.youtube.com/watch?v=J6mDkcqU_ZE)
  - [How to get started with the MERN stack](https://www.mongodb.com/languages/mern-stack-tutorial)
+ - [How to Fix Nodemon (nodemon.ps1) Cannot Be Loaded Because Running Scripts is Disabled on This System.](https://dev.to/jumbo02/how-to-fix-nodemon-nodemon-ps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system-27km)
 
 ## [Documentation](https://docs.google.com/document/d/1fOS9ykJq5JkBTggqGvQehEprqKj2l9jeiW8U49dExWA/edit?usp=sharing)
 
