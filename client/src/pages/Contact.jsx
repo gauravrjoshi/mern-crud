@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -24,6 +25,30 @@ function Contact() {
 
         // Handle form submission here
         console.log(formData);
+
+        // Save to db
+
+        let data = JSON.stringify(formData);
+
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'http://localhost:5050/contact',
+            headers: {
+                'Content-Type': 'application/json',
+                'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDkwZmNhYzM3YTIzNTM0N2RlM2U2OCIsImlhdCI6MTcxMTk3NjE0NCwiZXhwIjoxNzEyMjM1MzQ0fQ.YIze6hjQtJQEhkyyGLgerj0910lxBVFoGWVttNAlNoE'
+            },
+            data: data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
     };
 
     return (
